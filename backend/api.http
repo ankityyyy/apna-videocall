@@ -1,0 +1,16 @@
+POST http://localhost:3002/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "userName":"@10ankit",
+  "password":"1234567",
+  "name":"ankit"
+}
+
+
+post http://localhost:3002/login HTTP/1.1
+Content-Type: application/json
+
+{"userName":"@10ankit",
+  "password":"1234567",
+}
