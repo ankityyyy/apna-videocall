@@ -32,6 +32,7 @@ export const AuthContext = createContext({});
 // Axios client
 const client = axios.create({
   baseURL: `${server}/api/v1/users`,
+  // baseURL: "http://localhost:3002/api/v1/users",
 });
 
 export const AuthProvider = ({ children }) => {
