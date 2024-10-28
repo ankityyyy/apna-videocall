@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
+import server from "../environment";
 
 // Initial state for the reducer
 const initialState = {
@@ -30,7 +31,7 @@ export const AuthContext = createContext({});
 
 // Axios client
 const client = axios.create({
-  baseURL: "http://localhost:3002/api/v1/users",
+  baseURL: `${server}/api/v1/users`,
 });
 
 export const AuthProvider = ({ children }) => {
