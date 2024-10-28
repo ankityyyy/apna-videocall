@@ -7,7 +7,10 @@ let timeOnline = {};
 export const connectToSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173", // Allow your client app origin
+      origin: [
+        "http://localhost:5173",
+        "https://apna-videocall-frontend.onrender.com",
+      ],
       methods: ["GET", "POST"],
       allowedHeaders: ["*"],
       credentials: true,
